@@ -1,10 +1,10 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'maven:3.9.4-eclipse-temurin-17-alpine' } }
+    agent { docker { image 'python:3.11.5-alpine3.18' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'python --version'
             }
         }
     }
